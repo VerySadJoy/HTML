@@ -1,0 +1,32 @@
+
+.content {
+    width: 300px;
+    color: rgb(0 0 0);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.reg_content {
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border: 2px solid grey;
+}
+
+input.reg_submit {
+    width: 210px;
+    background-color: rgb(156 200 198);
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+input.reg_cancel {
+    width: 210px;
+}
