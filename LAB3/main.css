@@ -1,0 +1,98 @@
+
+#wrap {
+    width: 1020px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* border: 7px solid black; */
+}
+
+#header {
+    width: 1000px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+#header a {
+    color: black;
+    text-decoration: none;
+}
+#header a:hover {
+    text-decoration: underline 2px rgb(191, 160, 122);
+}
+
+#content {
+    width: 1000px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+
+/* index.html */
+
+.title {
+    /* border: 1px solid green; */
+    position: relative;
+    animation-name: movingtext;
+    animation-duration: 2s;
+}
+@keyframes movingtext {
+    0% {left: 900px;}
+    100% {left: 0px;}
+}
+
+.items {
+    width: 1000px;
+    display: flex;
+}
+
+.items > div {
+    width: 400px;
+    height: 400px;
+    border: 1px solid blue;
+    margin: auto;
+}
+
+img.rotate {
+    transition: transform 2s;
+}
+img.rotate:hover {
+    transform: rotate(360deg);
+}
+
+img.big {
+    transition: width 2s, height 2s;
+}
+img.big:hover {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* signup.html, login.html */
+
+.reg_content {
+    width: 300px;
+    font-size: 15px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+.reg_content > input {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid grey;
+}
+
+input.reg_submit {
+    width: 205px;
+    background-color: #3b4b59;
+    border: none;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input.reg_cancel {
+    width: 205px;
+}
