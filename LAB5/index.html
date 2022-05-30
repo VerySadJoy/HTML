@@ -1,55 +1,95 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Can Store</title>
-    <link href="https://fonts.googleapis.com/css?family=Cherry+Swash|Raleway" rel="stylesheet">
-    <link href="can-style.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    </head>
 
-  <body>
-    <header>
-      <h1>The Can Store</h1>
-    </header>
-    <div>
-      <aside>
-        <form>
-          <div>
-            <label for="category">Choose a category:</label>
-            <select id="category">
-              <option selected>All</option>
-              <option>Vegetables</option>
-              <option>Meat</option>
-              <option>Soup</option>
-            </select>
-          </div>
-          <div>
-            <label for="searchTerm">Enter search term:</label>
-            <input type="text" id="searchTerm" placeholder="e.g. beans">
-          </div>
-          <div>
-            <button>Filter results</button>
-          </div>
-        </form>
-      </aside>
-      <main>
+    <body>
+        <div id="wrap">
+            <!-- Header -->
+            <header id="header">
+                <h1 class="title">Hello!</h1>
+                <div>
+                    <nav id="navbar">
+                        <a href="index.html">메인페이지</a>
+                        <a href="login.html">로그인</a>
+                        <a href="signup.html">회원가입</a>
+                    </nav>
+                </div>
+            </header>
+            <hr>
 
-      </main>
-    </div>
-    <footer>
-      <p>All icons found at the Noun Project:</p>
+            <!-- Content -->
+            <div id="content">
+                <h2>Products</h2>
+                <div class="filter">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option selected>All</option>
+                        <option>Top</option>
+                        <option>Bottom</option>
+                        <option>Accessory</option>
+                    </select>
+                    <input id="searchTerm" type="text" placeholder="Type here.">
+                    <button id="searchBtn">Search</button>
+                </div>
 
-      <ul>
-        <li>Bean can icon by <a href="https://thenounproject.com/yalanis/">Yazmin Alanis</a></li>
-        <li>Vegetable icon by <a href="https://thenounproject.com/skatakila/">Ricardo Moreira</a></li>
-        <li>Soup icon by <a href="https://thenounproject.com/ArtZ91/">Arthur Shlain</a></li>
-        <li>Meat Chunk icon by <a href="https://thenounproject.com/smashicons/">Oliviu Stoian</a>.</li>
-      </ul>
-    </footer>
-    <script src="helloworld.js"></script>
-  </body>
+                <div id="items">
+                    <!-- <div class="imgbox">
+                        <img src="images/pleated_pants.jpeg" alt="Pleated Pants">
+                        <h3 class="name">Pleated Pants</h2>
+                        <p class="description">its beautiful</p>
+                        <p class="price">KRW 100,000</p>
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/shorts_beige.jpeg" alt="Shorts Beige">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/shorts_brown.jpeg" alt="Shorts Brown">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/short_sleeves_navy.jpeg" alt="Short Sleeves Navy">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/chino_beige.jpeg" alt="Chino Beige">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/shirt_pink.jpeg" alt="Shirts Pink">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/shirt_sax.jpeg" alt="Shirts Sax Blue">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/tshirt_gray.jpeg" alt="T-Shirts Gray">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/tshirt_white.jpeg" alt="T-Shirts White">
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/tie.jpeg" alt="Tie">
+                    </div> -->
+                </div>
+                <h2>About</h2>
+                <div class="text_column">
+                    <p>행복한 가정은 모두 모습이 비슷하고. 불행한 가정은 모두 제각각의 불행을 안고 있다.</p>
+                    <p>오블론스키의 집은 모든 것이 뒤죽박죽이었다. 아내는 남편이 전에 자기 집의 가정교사로 있던 프랑스 여자와 바람이 난 것을
+                        알아차리고, 남편에게 더 이상 한집에서 살 수 없다고 선언했다. 이런 상황이 벌써 사흘 째 이어지자, 당사자인 부부뿐 
+                        아니라 다른 가족과 하인들까지 못 견디게 괴로웠다. 가족과 하인들은 모두 오블론스키 부부가 함께 사는 것이 무의미하다고 
+                        느꼈다. 심지어 여인숙에서 우연히 만난 사람들도 오블론스키 가의 부부, 가족, 하인들보다는 사이가 더 좋을 거라고 그들은 
+                        생각했다. 아내는 자기 방에서 한 발짝도 나오지 않았고, 남편은 사흘째 집에 들어오지 않았다. 아이들은 부모 잃은 고아처럼 
+                        온 집 안을 뛰어다녔다. 가정교사인 영국 여자는 가정부와 다투더니 친구에게 새 일자리를 구해 달라는 편지를 썼다. 요리사는 어제, 
+                        그것도 저녁 식사 시간에 맞춰 집을 나가버렸다. 그리고 허드렛일을 하는 하녀와 마부는 급료를 계산해달라고 성화였다.</p>
+                    <p>부부 싸움이 벌어진 지 사흘째 되는 날, 스테판 아르카지치 오블론스키 공작 - 세간에서는 그를 스티바라고 불렀다 - 은 평상시처럼 
+                        아침 8시에 눈을 떴다. 그가 누운 곳은 아내의 침실이 아닌, 자기 서재의 모로코산 가죽 소파 위였다. 그는 소파의 스프링 위에서 
+                        온실 속의 화초처럼 연약한 살진 몸뚱이를 뒤집어 돌아눕더니, 다시 한숨 푹 자고 싶은지 베개를 꼭 끌어안고 거기에 뺨을 파묻었다. 
+                        그러다 갑자기 벌떡 일어나 앉아 눈을 떴다.</p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
