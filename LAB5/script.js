@@ -1,13 +1,4 @@
-// infinite scroll
-window.onscroll = () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        document.querySelector('body').style.background = 'blue';
-    } else {
-        document.querySelector('body').style.background = 'white';
-    }
-}
-
-//fetch
+// fetch
 fetch('products.json')
 .then(response => {
     if (!response.ok) {
@@ -26,6 +17,7 @@ function initialize(products) {
 
     let categoryList;
     let finalList;
+    let row_counter
 
     finalList = products;
     updateDisplay();
@@ -35,10 +27,17 @@ function initialize(products) {
 
     searchBtn.addEventListener('click', selectCategory);
 
+    window.onscroll = () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            updateDisplay();
+        }
+    }
+
     function selectCategory(e) {
         e.preventDefault();
         categoryList = [];
         finalList = [];
+        row_counter = 1;
 
         if (category.value === 'All') {
             categoryList = products;
@@ -70,9 +69,13 @@ function initialize(products) {
             paragraph.textContent = 'No Results';
             productArea.append(paragraph);
         } else {
-            for (const product of finalList) {
-                fetchBlob(product);
+            // for (const product of finalList) {
+            //     fetchBlob(product);
+            // }
+            for (let col_counter = 0; col_counter < 3; col_counter++) {
+                fetchBlob(finalList[row_counter * col_counter]);
             }
+            row_counter++;
         }
     }
 
