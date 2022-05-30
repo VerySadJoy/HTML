@@ -86,7 +86,7 @@ function initialize(products) {
             return response.blob();
         })
         .then(blob => showProduct(blob, product))
-        .catch(err => console.eerror(`Fetch Problem: ${err.message}`));
+        .catch(err => console.error(`Fetch Problem: ${err.message}`));
     }
 
     function showProduct(blob, product) {

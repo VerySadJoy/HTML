@@ -1,23 +1,72 @@
 [
     {
         "name": "Chino Beige",
-        "price": 100000,
+        "price": "100,000",
         "description": "Two Pleated Wide Chino Pants",
         "category": "Bottom",
-        "image": "chino_beige.jpg"
+        "image": "chino_beige.jpeg"
     },
     {
         "name": "Pleated Pants",
-        "price": 100000,
+        "price": "100,000",
         "description": "Wool Two Pleated Wide Pants",
         "category": "Bottom",
-        "image": "pleated_pants.jpg"
+        "image": "pleated_pants.jpeg"
     },
     {
-        "name": "",
-        "price": 100000,
-        "description": "",
-        "category": "",
-        "image": ""
+        "name": "Pink Shirt",
+        "price": "100,000",
+        "description": "Comfortable Shirt",
+        "category": "Top",
+        "image": "shirt_pink.jpeg"
+    },
+    {
+        "name": "Sax Blue Shirt",
+        "price": "100,000",
+        "description": "Comfortable Shirt",
+        "category": "Top",
+        "image": "shirt_sax.jpeg"
+    },
+    {
+        "name": "Navy Short Sleeves",
+        "price": "100,000",
+        "description": "Short Sleeve Rugby T-Shirt",
+        "category": "Top",
+        "image": "short_sleeves_navy.jpeg"
+    },
+    {
+        "name": "Beige Shorts",
+        "price": "100,000",
+        "description": "Comfortable Shorts",
+        "category": "Bottom",
+        "image": "shorts_beige.jpeg"
+    },
+    {
+        "name": "Brown Shorts",
+        "price": "100,000",
+        "description": "Comfortable Shorts",
+        "category": "Bottom",
+        "image": "shorts_brown.jpeg"
+    },
+    {
+        "name": "Tie",
+        "price": "100,000",
+        "description": "Slim Tie",
+        "category": "Accessory",
+        "image": "tie.jpeg"
+    },
+    {
+        "name": "Gray T-Shirt",
+        "price": "100,000",
+        "description": "Short Sleeve Comfortable T-Shirt",
+        "category": "Top",
+        "image": "tshirt_gray.jpeg"
+    },
+    {
+        "name": "White T-Shirt",
+        "price": "100,000",
+        "description": "Short Sleeve Comfortable T-Shirt",
+        "category": "Top",
+        "image": "tshirt_white.jpeg"
     }
 ]
