@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Chino Beige",
+        "price": 100000,
+        "description": "Two Pleated Wide Chino Pants",
+        "category": "Bottom",
+        "image": "chino_beige.jpg"
+    },
+    {
+        "name": "Pleated Pants",
+        "price": 100000,
+        "description": "Wool Two Pleated Wide Pants",
+        "category": "Bottom",
+        "image": "pleated_pants.jpg"
+    },
+    {
+        "name": "",
+        "price": 100000,
+        "description": "",
+        "category": "",
+        "image": ""
+    }
+]
