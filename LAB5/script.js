@@ -73,7 +73,9 @@ function initialize(products) {
             //     fetchBlob(product);
             // }
             for (let col_counter = 0; col_counter < 3; col_counter++) {
-                fetchBlob(finalList[row_counter * col_counter]);
+                if (finalList[row_counter * col_counter]) {
+                    fetchBlob(finalList[row_counter * col_counter]);
+                }
             }
             row_counter++;
         }
