@@ -82,6 +82,25 @@ img.big:hover {
     height: 100%;
 } */
 
+.name {
+    visibility: hidden;
+}
+.name:hover {
+    visibility: visible;
+}
+.description {
+    visibility: hidden;
+}
+.description:hover {
+    visibility: visible;
+}
+.price {
+    visibility: hidden;
+}
+.price:hover {
+    visibility: visible;
+}
+
 .text_column {
     column-count: 2;
 }

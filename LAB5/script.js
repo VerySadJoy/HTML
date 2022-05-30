@@ -44,7 +44,7 @@ function initialize(products) {
             categoryList = products;
             selectProducts();
         } else {
-            categoryList = products.filter(product => product.type === category.value);
+            categoryList = products.filter(product => product.category === category.value);
             selectProducts();
         }
     }
@@ -54,7 +54,7 @@ function initialize(products) {
             finalList = categoryList;
         } else {
             const lowerCaseSearchTerm = searchTerm.value.trim().toLowerCase();
-            finalList = categoryList.filter(product => product.name.includes(lowerCaseSearchTerm));
+            finalList = categoryList.filter(product => product.name.toLowerCase().includes(lowerCaseSearchTerm));
         }
 
         updateDisplay();
@@ -97,8 +97,7 @@ function initialize(products) {
         const price = document.createElement('p');
         const image = document.createElement('img');
 
-        imgbox.setAttribute('class', 'imgbox');
-        imgbox.setAttribute('class', product.type);
+        imgbox.setAttribute('class', `imgbox ${product.category}`);
         name.setAttribute('class', 'name');
         description.setAttribute('class', 'description');
         price.setAttribute('class', 'price');
