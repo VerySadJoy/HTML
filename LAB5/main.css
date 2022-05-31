@@ -65,8 +65,44 @@
 }
 .imgbox img {
     width: 100%;
+    border-bottom: 1px solid gray;
+}
+.name {
+    text-align: right;
+}
+.description {
+    visibility: hidden;
+    text-align: right;
+    color: gray
+}
+.price {
+    visibility: hidden;
+    text-align: right;
+    text-decoration: underline;
 }
 
+#searchTerm {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#searchTerm:focus {
+    outline: none;
+}
+#searchBtn {
+    height: 35px;
+    width: 50px;
+    border: none;
+    color: black;
+}
+#category {
+    height: 35px;
+}
 /* img.rotate {
     transition: transform 2s;
 }

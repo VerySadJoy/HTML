@@ -17,27 +17,29 @@ function initialize(products) {
 
     let categoryList;
     let finalList;
-    let row_counter
+    let loadCounter = 0;
 
     finalList = products;
     updateDisplay();
 
-    categoryList = [];
-    finalList = [];
-
-    searchBtn.addEventListener('click', selectCategory);
-
     window.onscroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        if (window.innerHeight + window.scrollY > document.body.offsetHeight) {
+            console.log(loadCounter);
             updateDisplay();
         }
     }
+
+    searchBtn.addEventListener('click', selectCategory);
 
     function selectCategory(e) {
         e.preventDefault();
         categoryList = [];
         finalList = [];
-        row_counter = 1;
+        loadCounter = 0;
+
+        while (productArea.firstChild) {
+            productArea.removeChild(productArea.firstChild);
+        }
 
         if (category.value === 'All') {
             categoryList = products;
@@ -46,6 +48,9 @@ function initialize(products) {
             categoryList = products.filter(product => product.category === category.value);
             selectProducts();
         }
+
+        const productHeading = document.querySelector('#productHeading');
+        productHeading.innerHTML = `Products > ${category.value} > '${searchTerm.value}'`;
     }
 
     function selectProducts() {
@@ -60,24 +65,18 @@ function initialize(products) {
     }
 
     function updateDisplay() {
-        while (productArea.firstChild) {
-            productArea.removeChild(productArea.firstChild);
-        }
+
 
         if (finalList.length === 0) {
             const paragraph = document.createElement('p');
             paragraph.textContent = 'No Results';
             productArea.append(paragraph);
         } else {
-            // for (const product of finalList) {
-            //     fetchBlob(product);
-            // }
-            for (let col_counter = 0; col_counter < 3; col_counter++) {
-                if (finalList[row_counter * col_counter]) {
-                    fetchBlob(finalList[row_counter * col_counter]);
-                }
+            console.log(finalList, loadCounter);
+            for (let i = 0; i < 3; i++) {
+                if (finalList[loadCounter + i]) fetchBlob(finalList[loadCounter + i]);
             }
-            row_counter++;
+            loadCounter += 3;
         }
     }
 
@@ -119,5 +118,10 @@ function initialize(products) {
         imgbox.append(name);
         imgbox.append(description);
         imgbox.append(price);
+
+        imgbox.addEventListener('click', e => {
+            price.style.visibility = 'visible';
+            description.style.visibility = 'visible';
+        })
     }
 }
